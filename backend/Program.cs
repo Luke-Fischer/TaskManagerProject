@@ -35,6 +35,15 @@ app.MapPost("/api/tasks", async (TaskItem task, AppDbContext db) =>
         return Results.BadRequest(new { message = error });
     }
 
+    if (task.WorkerId.HasValue)
+    {
+        var assignee = await db.Workers.FindAsync(task.WorkerId.Value);
+        if (assignee == null)
+            return Results.BadRequest(new { message = "Assigned worker does not exist." });
+
+        task.Assignee = assignee;
+    }
+
     db.Tasks.Add(task);
     await db.SaveChangesAsync();
 
@@ -48,7 +57,10 @@ app.MapPost("/api/tasks", async (TaskItem task, AppDbContext db) =>
 // Get all tasks
 app.MapGet("/api/tasks", async (AppDbContext db) =>
 {
-    var tasks = await db.Tasks.ToListAsync();
+    var tasks = await db.Tasks
+        .Include(t => t.Assignee)
+        .ToListAsync();
+
     return Results.Ok(new
     {
         message = "Fetched all tasks.",
