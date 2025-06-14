@@ -37,4 +37,10 @@ app.MapPost("/api/tasks", async (TaskItem task, AppDbContext db) =>
     return Results.Created($"/api/tasks/{task.Id}", task);
 });
 
+app.MapGet("/api/tasks", async (AppDbContext db) =>
+{
+    var tasks = await db.Tasks.ToListAsync();
+    return Results.Ok(tasks);
+});
+
 app.Run();
