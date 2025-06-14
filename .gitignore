@@ -1,0 +1,38 @@
+# ============================
+# General
+# ============================
+*.log
+*.tmp
+*.env
+*.DS_Store
+Thumbs.db
+
+# ============================
+# .NET / C# (backend)
+# ============================
+backend/bin/
+backend/obj/
+backend/.vs/
+backend/*.user
+backend/*.suo
+backend/*.db
+
+# ============================
+# Node / React / Vite (frontend)
+# ============================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.eslintcache
+
+# ============================
+# Editor / OS
+# ============================
+.vscode/
+.idea/
+*.swp
+
+# ============================
+# Optional: Uncomment below to exclude SQLite file unless needed
+# ============================
+# tasks.db
