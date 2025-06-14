@@ -15,7 +15,10 @@ backend/obj/
 backend/.vs/
 backend/*.user
 backend/*.suo
-backend/*.db
+backend/tasks.db
+backend/tasks.db-shm
+backend/tasks.db-wal
+
 
 # ============================
 # Node / React / Vite (frontend)
@@ -31,8 +34,3 @@ frontend/.eslintcache
 .vscode/
 .idea/
 *.swp
-
-# ============================
-# Optional: Uncomment below to exclude SQLite file unless needed
-# ============================
-# tasks.db
