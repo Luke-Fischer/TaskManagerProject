@@ -1,6 +1,6 @@
 namespace backend.Models;
 
-public enum TaskStatus
+public enum StatusOfTask
 {
     Todo,
     InProgress,

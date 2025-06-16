@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using backend.Models;
 using backend.Data;
 using backend.Validation;
+using backend.DTOs;
+using backend.Extensions;
 
 namespace backend.Endpoints
 {
@@ -12,6 +14,7 @@ namespace backend.Endpoints
             app.MapPost("/api/tasks", CreateTask);
             app.MapGet("/api/tasks", GetAllTasks);
             app.MapDelete("/api/tasks/{id:int}", DeleteTask);
+            app.MapPut("/api/tasks/{id:int}", UpdateTask);
         }
 
         // ============================
@@ -72,6 +75,27 @@ namespace backend.Endpoints
             return Results.Ok(new
             {
                 message = $"Deleted task: {task.Title}"
+            });
+        }
+        
+        private static async Task<IResult> UpdateTask(int id, UpdateTaskDto dto, AppDbContext db)
+        {
+            var task = await db.Tasks.Include(t => t.Assignee).FirstOrDefaultAsync(t => t.Id == id);
+            if (task == null)
+                return Results.NotFound(new { message = "Task not found." });
+
+            var (success, error) = await task.ApplyUpdateAsync(dto, db);
+            if (!success)
+            {
+                return Results.BadRequest(new { message = error });
+            }
+
+            await db.SaveChangesAsync();
+
+            return Results.Ok(new
+            {
+                message = "Task updated successfully.",
+                data = task
             });
         }
     }
