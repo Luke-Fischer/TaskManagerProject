@@ -18,6 +18,23 @@ namespace backend.Extensions
             {
                 options.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
             });
+
+            services.AddCorsPolicy();
+        }
+        
+        public static IServiceCollection AddCorsPolicy(this IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowLocalhost3000", policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
+            return services;
         }
     }
 }

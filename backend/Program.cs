@@ -7,6 +7,8 @@ builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 
+app.UseCors("AllowLocalhost3000");
+
 // Ensure the DB is created
 app.EnsureDbCreated();
 
