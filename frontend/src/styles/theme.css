@@ -1,0 +1,14 @@
+:root {
+  --black: #1a1a1a;
+  --gray-dark: #262626;
+  --yellow: #FFD700;
+  --text-light: #f2f2f2;
+  --text-muted: #d9d9d9;
+}
+
+body {
+  background-color: var(--black);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-light);
+}

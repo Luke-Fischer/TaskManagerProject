@@ -1,0 +1,84 @@
+.container {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+.heading {
+  font-size: 1.5rem;
+  color: var(--yellow);
+}
+
+.taskCard {
+  background-color: #262626;
+  border: 1px solid #333;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(255, 215, 0, 0.15);
+  padding: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.statusDropdown {
+  padding: 4px 30px 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  outline: none;
+  appearance: none;
+  background-color: white;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='black' height='10' viewBox='0 0 24 24' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  cursor: pointer;
+  min-width: 100px;
+  height: 28px;
+  line-height: 1;
+}
+
+.statusDropdown:hover,
+.statusDropdown:focus {
+  border-color: #888;
+}
+
+/* Status styles */
+.todo {
+  color: #5e6c84;
+}
+
+.inprogress {
+  color: #0052cc;
+}
+
+.completed {
+  color: #006644;
+}
+
+.blocked {
+  color: #a80000;
+}
+
+
+.text {
+  color: var(--text-muted);
+}
+
+.assigneeDropdown {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  appearance: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.assigneeDropdown:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #facc15; /* optional subtle glow */
+}
+
+
