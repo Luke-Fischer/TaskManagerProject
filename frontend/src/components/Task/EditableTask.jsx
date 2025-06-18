@@ -5,7 +5,7 @@ import TaskFields from './TaskFields';
 import TaskActions from './TaskActions';
 
 
-function EditableTask({ task, workers = [] }) {
+function EditableTask({ task, onTaskUpdate, workers = [] }) {
   const {
     title, setTitle,
     description, setDescription,
@@ -24,6 +24,14 @@ function EditableTask({ task, workers = [] }) {
 
     try {
       await updateTask(task.id, payload);
+
+      onTaskUpdate({
+        ...task,
+        title,
+        description,
+        status,
+        assignee: assigneeId ? { id: assigneeId } : null
+      });
 
       updateOriginal({
         ...task,
