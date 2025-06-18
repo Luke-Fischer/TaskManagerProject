@@ -17,10 +17,6 @@ namespace backend.Endpoints
             app.MapPut("/api/tasks/{id:int}", UpdateTask);
         }
 
-        // ============================
-        // Task Handlers
-        // ============================
-
         private static async Task<IResult> CreateTask(TaskItem task, AppDbContext db)
         {
             var (isValid, error) = await TaskItemValidator.ValidateAsync(task, db);

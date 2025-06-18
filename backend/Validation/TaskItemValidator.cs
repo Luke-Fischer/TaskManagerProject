@@ -73,20 +73,12 @@ public static class TaskItemValidator
         return (true, null);
     }
 
-    // ---------- Private Helper Methods ----------
-
     private static string? ValidateTitle(string title)
     {
         if (string.IsNullOrWhiteSpace(title))
         {
             return "Title is required.";
         }
-
-        if (title.Length > 100)
-        {
-            return "Title must be 100 characters or fewer.";
-        }
-
         return null;
     }
 
@@ -96,12 +88,6 @@ public static class TaskItemValidator
         {
             return "Description is required.";
         }
-
-        if (description.Length > 500)
-        {
-            return "Description must be 500 characters or fewer.";
-        }
-
         return null;
     }
 }
