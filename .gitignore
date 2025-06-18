@@ -15,9 +15,9 @@ backend/obj/
 backend/.vs/
 backend/*.user
 backend/*.suo
-backend/tasks.db
-backend/tasks.db-shm
-backend/tasks.db-wal
+backend/TaskManager.db
+backend/TaskManager.db-shm
+backend/TaskManager.db-wal
 
 
 # ============================
