@@ -51,7 +51,7 @@ It is provided for demo purposes, so you can run the app and see example tasks a
 
 `npm install`
 
-`npm run dev`
+`npm start`
 
 ---
 
