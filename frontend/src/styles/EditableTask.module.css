@@ -1,0 +1,172 @@
+.container {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+.heading {
+  font-size: 1.5rem;
+  color: var(--yellow);
+}
+
+.taskCard {
+  background-color: #262626;
+  border: 1px solid #333;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(255, 215, 0, 0.15);
+  padding: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.statusDropdown {
+  padding: 4px 30px 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  outline: none;
+  appearance: none;
+  background-color: white;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='black' height='10' viewBox='0 0 24 24' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  cursor: pointer;
+  min-width: 100px;
+  height: 28px;
+  line-height: 1;
+}
+
+.statusDropdown:hover,
+.statusDropdown:focus {
+  border-color: #888;
+}
+
+/* Status styles */
+.todo {
+  color: #5e6c84;
+}
+
+.inprogress {
+  color: #0052cc;
+}
+
+.completed {
+  color: #006644;
+}
+
+.blocked {
+  color: #a80000;
+}
+
+
+.text {
+  color: var(--text-muted);
+}
+
+.assigneeDropdown {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  appearance: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.assigneeDropdown:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #facc15; /* optional subtle glow */
+}
+
+
+.editableInput {
+  color: white;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 1.25rem; /* mimic h3 */
+  font-weight: 600;
+  transition: border 0.2s ease, background-color 0.2s ease;
+  margin-bottom: 0.5rem; /* space between title and description */
+}
+
+.editableTextarea {
+  color: white;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  transition: border 0.2s ease, background-color 0.2s ease;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.editableInput:hover,
+.editableTextarea:hover {
+  cursor: text;
+  background-color: rgba(255, 255, 255, 0.05); /* subtle hint */
+}
+
+.editableInput:focus,
+.editableTextarea:focus {
+  border: 1px solid #facc15; /* Ezra yellow */
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+
+.actionButtons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.saveButton,
+.cancelButton {
+  padding: 8px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.saveButton {
+  background-color: #facc15; /* Ezra yellow */
+  color: black;
+}
+
+.saveButton:hover {
+  background-color: #fcd34d;
+}
+
+.cancelButton {
+  background-color: #2d2d2d;
+  color: white;
+  border: 1px solid #444;
+}
+
+.cancelButton:hover {
+  background-color: #3a3a3a;
+}
+
+.deleteButton {
+  background-color: #b91c1c; /* red-700 */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.deleteButton:hover {
+  background-color: #991b1b; /* red-800 */
+}
