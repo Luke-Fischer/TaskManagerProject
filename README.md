@@ -6,7 +6,7 @@ A full-stack task management app built as part of a take-home challenge. The pro
 
 ## Tech Stack
 
-- **Backend:** .NET 7 Minimal APIs, Entity Framework Core (SQLite)
+- **Backend:** .NET Minimal APIs, Entity Framework Core (SQLite)
 - **Frontend:** React, CSS Modules
 - **Database:** SQLite
 - **API Testing:** Postman (collection included in `/postman`)
@@ -36,13 +36,18 @@ A full-stack task management app built as part of a take-home challenge. The pro
 
 ### 1. Backend Setup (.NET)
 `cd backend`
+
 `dotnet restore`
+
 `dotnet ef database update`
+
 `dotnet run`
 
 ### 1. Frontend Setup (React)
 `cd frontend`
+
 `npm install`
+
 `npm run dev`
 
 ---
