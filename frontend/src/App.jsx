@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Task Manager</h1>
+      <h1 className={styles.heading}>MyEzra Task Manager</h1>
 
       <div className={styles.actions}>
         <button
