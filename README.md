@@ -35,45 +35,34 @@ A full-stack task management app built as part of a take-home challenge. The pro
 ## Setup
 
 ### 1. Backend Setup (.NET)
-cd backend
-dotnet run
+`cd backend`
+`dotnet restore`
+`dotnet ef database update`
+`dotnet run`
 
 ### 1. Frontend Setup (React)
-cd frontend
-npm install
-npm run dev
+`cd frontend`
+`npm install`
+`npm run dev`
 
 ---
 
 ## Assumptions and Notes
-I used SQLite via Entity Framework Core for persistence.
-
-Minimal API architecture is used for simplicity but structured cleanly with separate endpoint mapping files.
-
-The "toggle completion" requirement was interpreted as status control (Todo, InProgress, Completed, Blocked).
-
-Tasks can optionally be assigned to workers. This supports extensibility but wasn't required.
-
-The UI is responsive and styled with dark theme + yellow accents (Ezra branding inspiration).
-
-Tasks can optionally be assigned to workers. 
-
-Although I didn't have time to implement a UI for deleting workers, if a worker is deleted through Postman, all tasks assigned to that worker will automatically update and show them as Unassigned in the frontend.
+- I used SQLite via Entity Framework Core for persistence.
+- Minimal API architecture is used for simplicity but structured cleanly with separate endpoint mapping files.
+- The "toggle completion" requirement was interpreted as status control (Todo, InProgress, Completed, Blocked).
+- Tasks can optionally be assigned to workers. This supports extensibility but wasn't required.
+- The UI is responsive and styled with dark theme + yellow accents (Ezra branding inspiration).
+- Tasks can optionally be assigned to workers. 
+- Although I didn't have time to implement a UI for deleting workers, if a worker is deleted through Postman, all tasks assigned to that worker will automatically update and show them as Unassigned in the frontend.
 
 ---
 
 ## If I Had More Time I would:
-
-Add authentication and authorization
-
-Deploy the full stack
-
-Implement full CRUD for workers on the frontend (including editing and deletion)
-
-Add unit and integration tests
-
-Allow drag-and-drop task reordering (e.g. Kanban-style)
-
-Add tags or labels for task categorization
-
-Add an AI helper for each task that could provide comments and direction
+- Add authentication and authorization
+- Deploy the full stack
+- Implement full CRUD for workers on the frontend (including editing and deletion)
+- Add unit and integration tests
+- Allow drag-and-drop task reordering (e.g. Kanban-style)
+- Add tags or labels for task categorization
+- Add an AI helper for each task that could provide comments and direction
