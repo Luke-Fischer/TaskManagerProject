@@ -61,7 +61,6 @@ It is provided for demo purposes, so you can run the app and see example tasks a
 - The "toggle completion" requirement was interpreted as status control (Todo, InProgress, Completed, Blocked).
 - Tasks can optionally be assigned to workers. This supports extensibility but wasn't required.
 - The UI is responsive and styled with dark theme + yellow accents (Ezra branding inspiration).
-- Tasks can optionally be assigned to workers. 
 - Although I didn't have time to implement a UI for deleting workers, if a worker is deleted through Postman, all tasks assigned to that worker will automatically update and show them as Unassigned in the frontend.
 
 ---
