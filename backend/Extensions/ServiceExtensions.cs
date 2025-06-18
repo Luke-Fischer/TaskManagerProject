@@ -11,7 +11,7 @@ namespace backend.Extensions
         {
             // Register EF Core with SQLite
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlite("Data Source=tasks.db"));
+                options.UseSqlite("Data Source=./Data/TaskManager.db"));
 
             // Configure enum serialization as strings
             services.Configure<JsonOptions>(options =>
