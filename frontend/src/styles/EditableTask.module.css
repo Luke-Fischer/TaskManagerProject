@@ -28,7 +28,7 @@
   outline: none;
   appearance: none;
   background-color: white;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='black' height='10' viewBox='0 0 24 24' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='black' height='10' viewBox='0 0 24 24' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /*dropdown arrow*/
   background-repeat: no-repeat;
   background-position: right 8px center;
   background-size: 12px;
@@ -43,7 +43,7 @@
   border-color: #888;
 }
 
-/* Status styles */
+/* Colour coordinated styles */
 .todo {
   color: #5e6c84;
 }
@@ -78,7 +78,7 @@
 
 .assigneeDropdown:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #facc15; /* optional subtle glow */
+  box-shadow: 0 0 0 2px #facc15; /*glow */
 }
 
 
@@ -109,12 +109,12 @@
 .editableInput:hover,
 .editableTextarea:hover {
   cursor: text;
-  background-color: rgba(255, 255, 255, 0.05); /* subtle hint */
+  background-color: rgba(255, 255, 255, 0.05); 
 }
 
 .editableInput:focus,
 .editableTextarea:focus {
-  border: 1px solid #facc15; /* Ezra yellow */
+  border: 1px solid #facc15;
   background-color: rgba(255, 255, 255, 0.07);
   border-radius: 4px;
   padding: 4px;
@@ -138,7 +138,7 @@
 }
 
 .saveButton {
-  background-color: #facc15; /* Ezra yellow */
+  background-color: #facc15;
   color: black;
 }
 
@@ -157,7 +157,7 @@
 }
 
 .deleteButton {
-  background-color: #b91c1c; /* red-700 */
+  background-color: #b91c1c; 
   color: white;
   border: none;
   padding: 6px 12px;
@@ -168,5 +168,5 @@
 }
 
 .deleteButton:hover {
-  background-color: #991b1b; /* red-800 */
+  background-color: #991b1b;
 }
