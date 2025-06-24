@@ -22,6 +22,7 @@ A full-stack task management app built as part of a take-home challenge. The pro
 - `DELETE /api/tasks/{id}` — delete a task
 - `GET /api/workers` — fetch available workers
 - `POST /api/workers` — add a new worker
+- `DELETE /api/workers/{id}` — delete a worker, and unnassign all tasks assigned to the worker
 
 This project includes a prepopulated SQLite database (TaskManager.db) located in the backend/Data/ folder.
 It is provided for demo purposes, so you can run the app and see example tasks and workers immediately.
